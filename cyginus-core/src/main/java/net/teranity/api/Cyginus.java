@@ -23,6 +23,7 @@ public class Cyginus {
     @Getter private OrionTable rankPermsTable;
     @Getter private OrionTable giftsTable;
 
+    // CyginusAPI
     public Cyginus() {
         setInstance(this);
 
