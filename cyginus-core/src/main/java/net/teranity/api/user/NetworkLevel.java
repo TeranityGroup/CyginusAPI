@@ -90,14 +90,14 @@ public class NetworkLevel implements INetworkLevel{
         return rewards;
     }
 
-    @Override @SneakyThrows(RecordException.class)
+    @Override
     public void addReward(Reward reward) {
         if (getRewards().contains(reward)) return;
 
         Cyginus.getInstance().getUser(uuid).getUserReward().addReward(reward);
     }
 
-    @Override @SneakyThrows(RecordException.class)
+    @Override
     public void removeReward(Reward reward) {
         if (!getRewards().contains(reward)) return;
 
