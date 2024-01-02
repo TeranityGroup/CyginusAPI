@@ -34,7 +34,7 @@ public class UserStatus implements IUserStatus {
 
     @SneakyThrows(RecordException.class)
     public void setOnline(boolean online) {
-        RecordSetter recordSetter = RecordSetter.build(Cyginus.getInstance().getUserTable());\
+        RecordSetter recordSetter = RecordSetter.build(Cyginus.getInstance().getUserTable());
 
         recordSetter.setSelect("online", (Boolean) online);
         recordSetter.setParent("uuid", (String) uuid.toString());
